@@ -1,0 +1,99 @@
+.G-001 {
+    background-image: linear-gradient(to right top, #a3c231, #3cc87a, #00c3bb, #00b7df, #73a5dc);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.postContainer {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card-header {
+    text-transform: capitalize;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-end {
+    display: flex;
+    justify-content: end;
+}
+
+
+.fade-model {
+    position: fixed;
+    top: 25vh;
+    left: 40%;
+    width: 20%;
+    display: none;
+    z-index: 1;
+    animation: form-collapse 0.5s ease-in-out;
+}
+
+.fadeOverley {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes form-collapse {
+    from {
+        margin-top: -10%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 1;
+    }
+
+}
+
+
+@media all and (min-width:996px) and (max-width:1200px){
+    .fade-model {
+        top: 15vh;
+        left: 30%;
+        width: 40%;
+    }
+}
+
+@media all and (max-width:996px) {
+    .fade-model {
+        top: 15vh;
+        left: 20%;
+        width: 60%;
+    }
+}
+
+@media all and (max-width:768px){
+    .fadeBtn button{
+        width: 100%;
+    }
+    .fadeBtn .hideFade{
+        margin-bottom: 10px;
+    }
+    h1.text-white{
+        font-size: 32px;
+    }
+}
